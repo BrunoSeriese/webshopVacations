@@ -1,0 +1,18 @@
+
+.blurrinator{
+  position: fixed;
+  z-index: 3;
+  background-image: url("../../../assets/images/boat1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: 0%;
+  left: 0%;
+  clip-path: polygon(100% 100%, 0% 100%, 100% 0);
+  height: 100vh;
+  width: 100vw;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+}

@@ -1,0 +1,5 @@
+<li *ngFor="let nav_item of navbar_items" class="nav-item">
+  <a routerLink="{{nav_item.link}}"
+     routerLinkActive="active" class="nav-link">
+    {{nav_item.name}}</a>
+</li>

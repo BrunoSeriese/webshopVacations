@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-lg my-nav special-fade ">
+  <a class="navbar-brand mr-auto p-3" href="#">
+    Adventurous Seasons
+  </a>
+
+  <button class="navbar-toggler" type="button"
+          (click)="toggleNavbar()">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse mr-2 "
+       [ngClass]="{ 'show': navbarOpen }">
+
+    <app-navbutton class="navbar-nav mr-auto justify-content-around"></app-navbutton>
+
+  </div>
+</nav>
+
+
+
