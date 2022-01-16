@@ -8,6 +8,16 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './core/navbar/navbar.component';
 import { BlurryOverlayComponent } from './shared/blurry-overlay/blurry-overlay.component';
 import { NavbuttonComponent } from './core/navbar/navbutton/navbutton.component';
+import { VacationComponent } from './Content/vacation-list/vacation/vacation.component';
+import {VacationService} from "./Content/vacation-list/vacation/vacation.service";
+import {HomeComponent} from "./modules/home/home.component";
+import {AutumnComponent} from "./modules/home/pages/autumn/autumn.component";
+import {WinterComponent} from "./modules/home/pages/winter/winter.component";
+import {SpringComponent} from "./modules/home/pages/spring/spring.component";
+import {SummerComponent} from "./modules/home/pages/summer/summer.component";
+import { VacationListComponent } from './Content/vacation-list/vacation-list.component';
+import { CartListComponent } from './Content/cart-list/cart-list.component';
+import { CartItemComponent } from './Content/cart-list/cart-item/cart-item.component';
 
 
 
@@ -19,14 +29,23 @@ import { NavbuttonComponent } from './core/navbar/navbutton/navbutton.component'
     AppComponent,
     NavbarComponent,
     BlurryOverlayComponent,
-    NavbuttonComponent
+    NavbuttonComponent,
+    VacationComponent,
+    HomeComponent,
+    AutumnComponent,
+    WinterComponent,
+    SpringComponent,
+    SummerComponent,
+    VacationListComponent,
+    CartListComponent,
+    CartItemComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
 
   ],
-  providers: [],
+  providers: [VacationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

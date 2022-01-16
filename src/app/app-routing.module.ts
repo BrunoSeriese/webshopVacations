@@ -4,15 +4,16 @@ import {AutumnComponent} from "./modules/home/pages/autumn/autumn.component";
 import {SpringComponent} from "./modules/home/pages/spring/spring.component";
 import {SummerComponent} from "./modules/home/pages/summer/summer.component";
 import {WinterComponent} from "./modules/home/pages/winter/winter.component";
-import {PageNotFoundComponent} from "./modules/home/pages/page-not-found/page-not-found.component";
+import {AppComponent} from "./app.component";
+import {HomeComponent} from "./modules/home/home.component";
+import {VacationListComponent} from "./Content/vacation-list/vacation-list.component";
 
 const appRoutes: Routes = [
-  { path: 'autumn', component: AutumnComponent },
-  { path: 'spring', component: SpringComponent },
-  { path: 'summer', component: SummerComponent },
-  { path: 'winter', component: WinterComponent },
-  { path: '',   redirectTo: '/', pathMatch: 'full' },
-  { path: '**', component: PageNotFoundComponent }
+  { path: '', component: HomeComponent, children:[
+      { path: 'vacations/:id', component: VacationListComponent}
+    ]}
+
+
 ];
 
 

@@ -1,0 +1,34 @@
+
+.main-background{
+  background-image: url("../../../assets/images/boat1.jpg");
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex-direction: column;
+
+}
+.dd-flex{
+
+
+
+  margin-top: 6rem;
+  z-index: 20!important;
+  position: relative!important;
+
+}
+.onTop{
+
+}
+
+.blur-overlay{
+  height: 100vh;
+  width: 100vw;
+}
+
+@media (max-width: 992px) {
+  .blur-overlay{
+    display: none;
+  }
+
+}

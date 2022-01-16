@@ -1,0 +1,13 @@
+<div class="d-flex justify-content-center align-content-center align-items-center  ">
+  <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
+
+    <ng-container *ngFor="let vac of vacations">
+      <app-vacation
+        [vacation]="vac"
+        *ngIf="vac.seasonID.toString() == location"
+
+        ></app-vacation>
+    </ng-container>
+
+  </div>
+</div>
