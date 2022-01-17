@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Subscription} from "rxjs";
 import {ActivatedRoute, Params} from "@angular/router";
+import {CartItemService} from "../../cart-list/cart-item/cart-item.service";
 
 @Component({
   selector: 'app-vacation',
@@ -8,12 +9,16 @@ import {ActivatedRoute, Params} from "@angular/router";
   styleUrls: ['./vacation.component.scss']
 })
 export class VacationComponent implements OnInit {
-  @Input() vacation!: {id: number,country: string,city: string,seasonID: number, description: string}
+  @Input() vacation!: {id: number,price: number,country: string,city: string,seasonID: number, description: string}
 
-  constructor() { }
+  constructor(private cartItemService: CartItemService) { }
 
   ngOnInit() {
 
+  }
+
+  addToCart(city: string, price: number){
+    this.cartItemService.addItem(city,price);
   }
 
 }

@@ -9,7 +9,7 @@ import {Subscription} from "rxjs";
   styleUrls: ['./vacation-list.component.scss']
 })
 export class VacationListComponent implements OnInit {
-  vacations: { id: number, country: string, city: string, seasonID: number, description: string }[] = [];
+  vacations: { id: number, price: number, country: string, city: string, seasonID: number, description: string }[] = [];
   test = true;
   location: string | undefined
   paramsSubscription: Subscription | undefined;

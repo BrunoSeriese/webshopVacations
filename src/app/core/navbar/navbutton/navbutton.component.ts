@@ -8,11 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class NavbuttonComponent implements OnInit {
 
   navbar_items = [
-    {link:1, name:"Winter"},
-    {link:2, name:"Spring"},
-    {link:3, name:"Summer"},
-    {link:4 , name:"Autumn"},
-    {link:"cart", name:"Open Cart"},
+    {link:'vacations/1', name:"Winter"},
+    {link:'vacations/2', name:"Spring"},
+    {link:'vacations/3', name:"Summer"},
+    {link:'vacations/4' , name:"Autumn"},
+    {link:'cart', name:"Open Cart"},
+    {link:'admin', name:"Admin"},
 
   ]
 

@@ -1,4 +1,5 @@
 d.flex{
+  display: flex;
   flex-grow: 1;
   align-self: center;
   align-content: center;
@@ -7,4 +8,9 @@ d.flex{
 
 .card-group{
   flex-wrap: nowrap;
+}
+
+.container{
+  display: flex;
+  flex-grow: 1;
 }

@@ -1,0 +1,22 @@
+.myContainer,html,body{
+  height: 100vh;
+}
+
+.bigboi{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.bckgrnd{
+  background-image: url("../../../assets/images/cloudy.jpg");
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+}
+
+.col-sm-6{
+  height: 100%;
+}
+.form-group{
+  padding-bottom: 1rem;
+}

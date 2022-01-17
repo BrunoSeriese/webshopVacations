@@ -18,6 +18,8 @@ import {SummerComponent} from "./modules/home/pages/summer/summer.component";
 import { VacationListComponent } from './Content/vacation-list/vacation-list.component';
 import { CartListComponent } from './Content/cart-list/cart-list.component';
 import { CartItemComponent } from './Content/cart-list/cart-item/cart-item.component';
+import {CartItemService} from "./Content/cart-list/cart-item/cart-item.service";
+import { AdminLoginComponent } from './Admin/admin-login/admin-login.component';
 
 
 
@@ -38,14 +40,15 @@ import { CartItemComponent } from './Content/cart-list/cart-item/cart-item.compo
     SummerComponent,
     VacationListComponent,
     CartListComponent,
-    CartItemComponent
+    CartItemComponent,
+    AdminLoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
 
   ],
-  providers: [VacationService],
+  providers: [VacationService,CartItemService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

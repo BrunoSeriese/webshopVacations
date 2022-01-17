@@ -1,17 +1,20 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import {AutumnComponent} from "./modules/home/pages/autumn/autumn.component";
-import {SpringComponent} from "./modules/home/pages/spring/spring.component";
-import {SummerComponent} from "./modules/home/pages/summer/summer.component";
-import {WinterComponent} from "./modules/home/pages/winter/winter.component";
-import {AppComponent} from "./app.component";
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 import {HomeComponent} from "./modules/home/home.component";
 import {VacationListComponent} from "./Content/vacation-list/vacation-list.component";
+import {CartListComponent} from "./Content/cart-list/cart-list.component";
+import {AdminLoginComponent} from "./Admin/admin-login/admin-login.component";
 
 const appRoutes: Routes = [
-  { path: '', component: HomeComponent, children:[
-      { path: 'vacations/:id', component: VacationListComponent}
-    ]}
+  {
+    path: '', component: HomeComponent, children: [
+      {path: 'cart', component: CartListComponent},
+      {path: 'vacations/:id', component: VacationListComponent}
+    ]
+  },
+  {
+    path: 'admin', component: AdminLoginComponent
+  }
 
 
 ];
@@ -21,4 +24,5 @@ const appRoutes: Routes = [
   imports: [RouterModule.forRoot(appRoutes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}

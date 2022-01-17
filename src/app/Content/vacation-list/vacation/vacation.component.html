@@ -4,9 +4,10 @@
   *ngIf="vacation.seasonID">
   <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/184.webp" class="card-img-top" alt="Fissure in Sandstone"/>
   <div class="card-body">
-    <h5 class="card-title">{{vacation.city}}</h5>
-    <p>{{vacation.country}}</p>
+    <h5 class="card-title">{{vacation.city}} €{{vacation.price}}</h5>
+    <p>{{vacation.country}} </p>
     <p class="card-text">{{vacation.description}}</p>
-    <a class="btn btn-primary">Add To Cart!</a>
+    <a class="btn btn-primary"
+    (click)="addToCart(vacation.city,vacation.price)">Add To Cart!</a>
   </div>
 </div>
