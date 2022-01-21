@@ -14,3 +14,11 @@ d.flex{
   display: flex;
   flex-grow: 1;
 }
+@media screen and (max-width: 990px) {
+  .centerMe{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  }
+}

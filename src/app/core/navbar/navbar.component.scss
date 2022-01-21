@@ -40,3 +40,20 @@
 .navbar-collapse{
   z-index: 999999999999999999;
 }
+
+@media screen and (max-width: 990px) {
+  .navbar-collapse{
+    margin-top: 10rem;
+    display: flex!important;
+  }
+
+  .navbar{
+    display: flex;
+  }
+
+  .navbar-brand{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

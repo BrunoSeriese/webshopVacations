@@ -10,3 +10,13 @@
   padding: .4px;
   opacity: .8;
 }
+
+@media screen and (max-width: 990px) {
+ html,body{
+   height: 100%;
+   width: 100%;
+ }
+  .container{
+
+  }
+}

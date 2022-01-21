@@ -2,3 +2,10 @@
   width: 21rem;
   border: none;
 }
+
+
+@media screen and (max-width: 1290px) {
+  .card{
+    width: 18rem;
+  }
+}
