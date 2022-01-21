@@ -4,6 +4,7 @@ import {HomeComponent} from "./modules/home/home.component";
 import {VacationListComponent} from "./Content/vacation-list/vacation-list.component";
 import {CartListComponent} from "./Content/cart-list/cart-list.component";
 import {AdminLoginComponent} from "./Admin/admin-login/admin-login.component";
+import {DashboardComponent} from "./auth/dashboard/dashboard.component";
 
 const appRoutes: Routes = [
   {
@@ -14,7 +15,8 @@ const appRoutes: Routes = [
   },
   {
     path: 'admin', component: AdminLoginComponent
-  }
+  },
+  {path: 'dashboard', component: DashboardComponent}
 
 
 ];

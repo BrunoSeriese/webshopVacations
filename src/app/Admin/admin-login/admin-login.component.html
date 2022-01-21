@@ -4,16 +4,17 @@
       <form>
         <div class="form-group">
           <label for="exampleInputEmail1">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+          <input #userName required type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
                  placeholder="Enter email">
 
         </div>
         <div class="form-group">
           <label for="exampleInputPassword1">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          <input #userPassword required type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
         </div>
         <div class="button-group d-flex justify-content-between">
-          <button type="submit" class="btn btn-primary">Login</button>
+          <input type="button" class="btn btnPrimary" value="Log in" (click)="authService.SignIn(userName.value, userPassword.value)">
+
           <button  class="btn btn-danger"
           routerLink="">Back</button>
         </div>

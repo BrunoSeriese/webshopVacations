@@ -1,10 +1,20 @@
+import {get, set} from "@angular/fire/database";
 
 export class VacationModel {
   constructor(private _id: number,
               private _country: string,
+              private _price: number,
               private _city: string,
               private _seasonID: number,
               private _description: string) {
+  }
+
+  get price(): number {
+    return this._price;
+  }
+
+  set price(value: number) {
+    this._price = value;
   }
 
   get id(): number {

@@ -20,7 +20,12 @@ import { CartListComponent } from './Content/cart-list/cart-list.component';
 import { CartItemComponent } from './Content/cart-list/cart-item/cart-item.component';
 import {CartItemService} from "./Content/cart-list/cart-item/cart-item.service";
 import { AdminLoginComponent } from './Admin/admin-login/admin-login.component';
-
+import { AngularFireAuthModule } from "@angular/fire/compat/auth";
+import { AngularFireModule } from '@angular/fire/compat';
+import { environment } from '../environments/environment';
+import { DashboardComponent } from './auth/dashboard/dashboard.component';
+import { SignInComponent } from './auth/sign-in/sign-in.component';
+import { AuthService } from './auth/auth.service';
 
 
 
@@ -41,14 +46,19 @@ import { AdminLoginComponent } from './Admin/admin-login/admin-login.component';
     VacationListComponent,
     CartListComponent,
     CartItemComponent,
-    AdminLoginComponent
+    AdminLoginComponent,
+    DashboardComponent,
+    SignInComponent,
+
   ],
   imports: [
+    AngularFireAuthModule,
+    AngularFireModule.initializeApp(environment.firebase),
     BrowserModule,
     AppRoutingModule,
 
   ],
-  providers: [VacationService,CartItemService],
+  providers: [VacationService,CartItemService,AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
