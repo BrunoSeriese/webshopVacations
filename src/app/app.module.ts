@@ -26,6 +26,8 @@ import { environment } from '../environments/environment';
 import { DashboardComponent } from './auth/dashboard/dashboard.component';
 import { SignInComponent } from './auth/sign-in/sign-in.component';
 import { AuthService } from './auth/auth.service';
+import { AddVacationComponent } from './Admin/add-vacation/add-vacation.component';
+import { DeleteVacationComponent } from './Admin/delete-vacation/delete-vacation.component';
 
 
 
@@ -49,6 +51,8 @@ import { AuthService } from './auth/auth.service';
     AdminLoginComponent,
     DashboardComponent,
     SignInComponent,
+    AddVacationComponent,
+    DeleteVacationComponent,
 
   ],
   imports: [

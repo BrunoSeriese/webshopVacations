@@ -1,0 +1,42 @@
+<div class="myContainer">
+  <div class="row bigboi d-flex justify-content-center align-items-center">
+    <div class="col-sm-12 d-flex justify-content-center align-items-center">
+      <form class="myNiceForm">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Country</label>
+          <input #countryName required type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                 placeholder="Enter email">
+
+        </div>
+        <div class="form-group">
+          <label for="city1">City</label>
+          <input #cityName required type="text" class="form-control" id="city1" placeholder="City">
+        </div>
+        <div class="form-group">
+          <label for="price1">Price</label>
+          <input #priceTag required type="number" class="form-control" id="price1" placeholder="Price">
+        </div>
+        <div class="form-group">
+          <label for="seasonID1">SeasonID</label>
+          <input #seasonIDnum required type="number" class="form-control" id="seasonID1" placeholder="Season ID">
+        </div>
+        <div class="form-group">
+          <label for="description1">Description</label>
+          <input #descriptionText required type="text" class="form-control" id="description1" placeholder="Description">
+        </div>
+        <div class="button-group d-flex justify-content-between">
+          <input type="button" (click)="vacationService.addVacation(priceTag.value,countryName.value,cityName.value,seasonIDnum.value,descriptionText.value)" class="btn btn-primary" value="Add">
+
+          <button  class="btn btn-danger"
+                   routerLink="/dashboard">Back</button>
+        </div>
+      </form>
+    </div>
+
+
+
+  </div>
+
+</div>
+
+

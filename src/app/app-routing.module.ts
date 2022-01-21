@@ -5,6 +5,8 @@ import {VacationListComponent} from "./Content/vacation-list/vacation-list.compo
 import {CartListComponent} from "./Content/cart-list/cart-list.component";
 import {AdminLoginComponent} from "./Admin/admin-login/admin-login.component";
 import {DashboardComponent} from "./auth/dashboard/dashboard.component";
+import {AddVacationComponent} from "./Admin/add-vacation/add-vacation.component";
+import {DeleteVacationComponent} from "./Admin/delete-vacation/delete-vacation.component";
 
 const appRoutes: Routes = [
   {
@@ -16,7 +18,9 @@ const appRoutes: Routes = [
   {
     path: 'admin', component: AdminLoginComponent
   },
-  {path: 'dashboard', component: DashboardComponent}
+  {path: 'dashboard', component: DashboardComponent},
+  {path: 'add', component: AddVacationComponent},
+  {path: 'delete', component: DeleteVacationComponent}
 
 
 ];

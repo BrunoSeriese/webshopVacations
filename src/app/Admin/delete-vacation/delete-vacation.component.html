@@ -1,0 +1,32 @@
+<div class="myContainer">
+  <div class="row bigboi d-flex justify-content-center align-items-center">
+    <div class="col-sm-12 d-flex justify-content-center align-items-center">
+      <form class="myNiceForm">
+
+        <ul class="list-group">
+          <ng-container  *ngFor="let vac of vacations">
+            <div class="my-item p-1 ">
+              <li #vacationItem class="list-group-item d-flex justify-content-between ">{{vac.city}}
+                <input type="button" (click)="vacationService.deleteVacation(vac.city)"  class="btn btn-primary" value="Delete">
+              </li>
+
+            </div>
+
+          </ng-container>
+
+        </ul>
+        <div class="button-group d-flex justify-content-between">
+
+
+          <button  class="btn btn-danger"
+                   routerLink="/dashboard">Back</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+
