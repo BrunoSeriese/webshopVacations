@@ -6,6 +6,7 @@ import firebase from "firebase/compat";
 import Query = firebase.firestore.Query;
 import {query} from "@angular/fire/firestore";
 import firestore = firebase.firestore;
+import {ContentDAO} from "../../content.DAO";
 @Injectable()
 export class VacationService {
 
@@ -13,6 +14,15 @@ export class VacationService {
 
   vacations: { id: number, price: number, country: string, city: string, seasonID: number, description: string }[] = [];
 
+  constructor(public contentDAO: ContentDAO) {
+    console.log("THIS IS THE OBJECT!")
+    console.log(contentDAO.getAll().subscribe((x) =>{
+      console.log("simple object")
+     x.forEach(y =>
+       this.vacations.push(y)
+     )
+    }));
+  }
 
   addVacation(price: string, country: string, city: string, seasonID: string, description: string){
 
@@ -23,8 +33,13 @@ export class VacationService {
 
   }
 
-  deleteVacation(cityName: string){
-
+  deleteVacation(id: number){
+  this.vacations.forEach(( vac, index)=>{
+    if (vac.id == id){
+      // this.vacations.splice(index)
+    }
+  })
+    this.contentDAO.deleteVacation(id)
 
   }
 

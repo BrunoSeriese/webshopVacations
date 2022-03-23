@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {AuthService} from "../../auth/auth.service";
+import {LoginService} from "../../Content/user/login.service";
 
 
 @Component({
@@ -10,7 +11,7 @@ import {AuthService} from "../../auth/auth.service";
 export class AdminLoginComponent implements OnInit {
 
   constructor(
-    public authService: AuthService
+    public loginService: LoginService
   ) { }
 
   ngOnInit(): void {

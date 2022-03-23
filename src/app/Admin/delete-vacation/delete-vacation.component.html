@@ -7,7 +7,7 @@
           <ng-container  *ngFor="let vac of vacations">
             <div class="my-item p-1 ">
               <li #vacationItem class="list-group-item d-flex justify-content-between ">{{vac.city}}
-                <input type="button" (click)="vacationService.deleteVacation(vac.city)"  class="btn btn-primary" value="Delete">
+                <input type="button" (click)="vacationService.deleteVacation(vac.id)"  class="btn btn-primary" value="Delete">
               </li>
 
             </div>

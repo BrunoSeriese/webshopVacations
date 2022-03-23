@@ -27,6 +27,9 @@ import { SignInComponent } from './auth/sign-in/sign-in.component';
 import { AuthService } from './auth/auth.service';
 import { AddVacationComponent } from './Admin/add-vacation/add-vacation.component';
 import { DeleteVacationComponent } from './Admin/delete-vacation/delete-vacation.component';
+import {ContentDAO} from "./Content/content.DAO";
+import {HttpClientModule} from "@angular/common/http";
+import { UserComponent } from './Content/user/user.component';
 
 
 
@@ -52,14 +55,16 @@ import { DeleteVacationComponent } from './Admin/delete-vacation/delete-vacation
     SignInComponent,
     AddVacationComponent,
     DeleteVacationComponent,
+    UserComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule
 
   ],
-  providers: [VacationService,CartItemService,AuthService],
+  providers: [VacationService,CartItemService,AuthService,ContentDAO],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

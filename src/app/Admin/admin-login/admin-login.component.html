@@ -3,8 +3,8 @@
     <div class="col-sm-6 d-flex justify-content-center align-items-center">
       <form>
         <div class="form-group">
-          <label for="exampleInputEmail1">Email address</label>
-          <input #userName required type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+          <label for="exampleInputEmail1">Username</label>
+          <input #userName  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
                  placeholder="Enter email">
 
         </div>
@@ -13,10 +13,10 @@
           <input #userPassword required type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
         </div>
         <div class="button-group d-flex justify-content-between">
-          <input type="button" class="btn btnPrimary" value="Log in" >
+          <input type="button" class="btn btnPrimary" value="Log in"  (click)="loginService.login(userName.value, userPassword.value)">
 
           <button  class="btn btn-danger"
-          routerLink="">Back</button>
+          (click)="loginService.logout()">Back</button>
         </div>
       </form>
     </div>
