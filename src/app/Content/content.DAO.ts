@@ -35,6 +35,10 @@ export class ContentDAO {
         })
   }
 
+  public addVacation(){
+
+  }
+
 
 
 }
