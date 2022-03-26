@@ -30,6 +30,7 @@ import { DeleteVacationComponent } from './Admin/delete-vacation/delete-vacation
 import {ContentDAO} from "./Content/content.DAO";
 import {HttpClientModule} from "@angular/common/http";
 import { UserComponent } from './Content/user/user.component';
+import { LoginComponent } from './auth/login/login.component';
 
 
 
@@ -56,6 +57,7 @@ import { UserComponent } from './Content/user/user.component';
     AddVacationComponent,
     DeleteVacationComponent,
     UserComponent,
+    LoginComponent,
 
   ],
   imports: [

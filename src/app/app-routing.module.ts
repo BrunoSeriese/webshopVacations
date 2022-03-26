@@ -7,12 +7,14 @@ import {AdminLoginComponent} from "./Admin/admin-login/admin-login.component";
 import {DashboardComponent} from "./auth/dashboard/dashboard.component";
 import {AddVacationComponent} from "./Admin/add-vacation/add-vacation.component";
 import {DeleteVacationComponent} from "./Admin/delete-vacation/delete-vacation.component";
+import {LoginComponent} from "./auth/login/login.component";
 
 const appRoutes: Routes = [
   {
     path: '', component: HomeComponent, children: [
       {path: 'cart', component: CartListComponent},
-      {path: 'vacations/:id', component: VacationListComponent}
+      {path: 'vacations/:id', component: VacationListComponent},
+      {path: 'login', component: LoginComponent}
     ]
   },
   {

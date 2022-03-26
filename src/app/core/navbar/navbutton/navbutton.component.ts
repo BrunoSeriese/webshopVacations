@@ -14,6 +14,7 @@ export class NavbuttonComponent implements OnInit {
     {link:'vacations/4' , name:"Autumn"},
     {link:'cart', name:"Open Cart"},
     {link:'admin', name:"Admin"},
+    {link:'login', name:"Login"}
 
   ]
 

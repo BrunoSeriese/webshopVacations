@@ -35,8 +35,28 @@ export class ContentDAO {
         })
   }
 
-  public addVacation(){
 
+  public addVacation(vacation: VacationModel): void {
+    let requestOptions: any = {
+      headers: new HttpHeaders({"Authorization": "Bearer " + this.loginService.token}),
+    };
+
+
+      let body: any = {
+        "seasonID": vacation.seasonID,
+        "country": vacation.country,
+        "city": vacation.city,
+        "price":vacation.price,
+        "description": vacation.description
+      }
+      console.log(vacation.country)
+      console.log(vacation.seasonID)
+      console.log(vacation.city)
+      console.log(vacation.price)
+
+    this.http
+      .post(this.baseURL + "/vacation/add", body, requestOptions)
+      .subscribe();
   }
 
 

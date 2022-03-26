@@ -36,6 +36,26 @@ export class LoginService {
       )
   }
 
+  public loginUser(username: string, password: string): Subscription {
+    const fd = new FormData();
+    fd.append('username', username)
+    fd.append('password', password)
+    const httpOptions = {
+      headers: new HttpHeaders({})
+    }
+    return this.http
+      .post("http://localhost:8080/api/login", fd, httpOptions).subscribe(
+        res => {
+          this._token = res['access_token']
+          console.log(this._token)
+          console.log(res)
+        },
+        error => {
+          console.log(error)
+        }
+      )
+  }
+
   public logout(){
     this._token = ''
     console.log(this._token)
