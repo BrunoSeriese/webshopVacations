@@ -6,8 +6,18 @@
   height: 100%;
 }
 
-
+.label-text{
+  color: black;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
 
 .form-group{
   padding-bottom: 1rem;
+}
+
+.form-background{
+  border: 1px white;
+
+  border-radius: 2rem;
 }

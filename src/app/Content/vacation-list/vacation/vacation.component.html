@@ -7,7 +7,8 @@
     <h5 class="card-title">{{vacation.city}} €{{vacation.price}}</h5>
     <p>{{vacation.country}} </p>
     <p class="card-text">{{vacation.description}}</p>
+
     <a class="btn btn-primary"
-    (click)="addToCart(vacation.city,vacation.price)">Add To Cart!</a>
+    (click)="addToCart(vacation.id)">Add To Cart!</a>
   </div>
 </div>
