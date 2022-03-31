@@ -8,12 +8,11 @@
         [cartItem]="item"></app-cart-item>
     </div>
     <div class="vr"></div>
-    <div class="col-md-5 d-flex flex-column  justify-content-between ml-4"
-    *ngIf="totalPrice != 0">
+    <div class="col-md-5 d-flex flex-column  justify-content-between ml-4">
       <h3>Total Cost</h3>
       <h5> €{{totalPrice}}</h5>
       <div class="">
-        <button class="btn btn-danger flex-grow-0">Go to Payment</button>
+        <button class="btn btn-danger flex-grow-0" (click)="this.contentDAO.deleteCarts()">Clear Cart</button>
       </div>
 
     </div>

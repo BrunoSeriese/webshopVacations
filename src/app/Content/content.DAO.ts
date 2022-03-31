@@ -44,7 +44,7 @@ export class ContentDAO {
       .get<any[]>(this.baseURL + "/carts/" + this.loginService.userId, requestOptions);
   }
 
-  public getVacationById(id: String): Observable<any>{
+  public getVacationById(id: String): Observable<any> {
     let requestOptions: any = {
       headers: new HttpHeaders({"Authorization": "Bearer " + this.loginService.token}),
     };
@@ -77,25 +77,34 @@ export class ContentDAO {
       .subscribe();
   }
 
-  public addToCart(id: number){
+  public addToCart(id: number) {
     let requestOptions: any = {
       headers: new HttpHeaders({"Authorization": "Bearer " + this.loginService.token}),
     };
-
-
     let body: any = {
       "vacationId": id,
       "userId": this.loginService.userId
 
     }
-
-
-
     this.http
       .post(this.baseURL + "/cart/item", body, requestOptions)
       .subscribe();
 
   }
+
+  public deleteCarts(): Subscription {
+    let requestOptions: any = {
+      headers: new HttpHeaders({"Authorization": "Bearer " + this.loginService.token}),
+    };
+    return this.http
+      .delete(this.baseURL + "/carts/" + this.loginService.userId.toString(), requestOptions).subscribe(res => {
+          console.log(res);
+        },
+        error => {
+          console.log(error)
+        })
+  }
+
 
 
 }

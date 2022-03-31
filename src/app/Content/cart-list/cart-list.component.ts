@@ -14,7 +14,7 @@ export class CartListComponent implements OnInit {
   totalPrice: number | undefined;
 
   constructor(private cartItemService: CartItemService,
-              private contentDAO: ContentDAO,
+              public contentDAO: ContentDAO,
               private loginService: LoginService) {
 
 
@@ -29,6 +29,7 @@ export class CartListComponent implements OnInit {
     }
     this.cartItems = this.cartItemService.cartItems;
     this.totalPrice = this.cartItemService.totalPrice;
+
 
 
   }
