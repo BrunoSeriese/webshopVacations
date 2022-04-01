@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {AngularFireDatabase, AngularFireList} from "@angular/fire/compat/database";
 import {AngularFirestore} from "@angular/fire/compat/firestore";
 import {CartListComponent} from "../../cart-list/cart-list.component";
@@ -13,9 +13,6 @@ import {VacationModel} from "../../../features/vacation/vacation.model";
 export class DashboardComponent implements OnInit {
 
 
-
-
-
   constructor() {
 
 
@@ -23,7 +20,6 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 
 
 }

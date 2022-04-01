@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {CartItemService} from "../../features/cart-item/cart-item.service";
-import {Observable, Subscription} from "rxjs";
 import {LoginService} from "../../core/services/login.service";
 import {ContentDAOService} from "../../core/services/contentDAO.service";
 
@@ -10,7 +9,7 @@ import {ContentDAOService} from "../../core/services/contentDAO.service";
   styleUrls: ['./cart-list.component.scss']
 })
 export class CartListComponent implements OnInit {
-  cartItems: {name: string,price: number}[] = [];
+  cartItems: { name: string, price: number }[] = [];
   totalPrice: number | undefined;
 
   constructor(private cartItemService: CartItemService,
@@ -21,8 +20,8 @@ export class CartListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    if(this.loginService.userName != "doe" && this.cartItemService.cartItems.length < 1){
-      console.log("NOT A DOE YO YO YO")
+    if (this.loginService.userName != "doe" && this.cartItemService.cartItems.length < 1) {
+
       this.cartItemService.makeList();
       this.cartItems = this.cartItemService.cartItems;
       this.totalPrice = this.cartItemService.totalPrice;
@@ -31,10 +30,7 @@ export class CartListComponent implements OnInit {
     this.totalPrice = this.cartItemService.totalPrice;
 
 
-
   }
-
-
 
 
 }
