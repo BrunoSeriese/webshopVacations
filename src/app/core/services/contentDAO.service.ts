@@ -3,6 +3,7 @@ import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Injectable} from "@angular/core";
 import {VacationModel} from "../../features/vacation/vacation.model";
 import {LoginService} from "./login.service";
+import {environment} from "../../../environments/environment";
 
 
 @Injectable({
@@ -12,7 +13,7 @@ import {LoginService} from "./login.service";
 export class ContentDAOService {
 
 
-  private baseURL: String = "http://localhost:8080/api"
+  baseURL = environment.baseUrl
 
   constructor(private http: HttpClient, public loginService: LoginService) {
   }
