@@ -10,7 +10,7 @@
     "heroku-postbuild": "ng build — prod",
     "heroku-start": "http-server-spa dist/webshopVacations index.html $PORT",
     "postinstall": "ng build --aot --prod"
-  }, .
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~13.1.1",
