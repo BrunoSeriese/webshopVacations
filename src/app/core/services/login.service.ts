@@ -1,15 +1,16 @@
 import {Injectable} from '@angular/core';
-import {Observable, Subscription} from "rxjs";
+import { Subscription} from "rxjs";
 import {HttpClient, HttpEvent, HttpHeaders} from "@angular/common/http";
-import {user} from "@angular/fire/auth";
+
 import {Router} from "@angular/router";
-import {VacationModel} from "../../features/vacation/vacation.model";
+
+import {environment} from "../../../environments/environment";
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
-  private baseURL: String = "http://localhost:8080/api";
+  baseURL = environment.baseUrl
   private _token: String = "";
   public userId: number = 0;
   public userName: string = "doe";
