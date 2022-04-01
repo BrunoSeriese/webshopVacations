@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
- baseUrl: 'https://spring-webvacation-api.herokuapp.com/'
+ baseUrl: 'https://spring-webvacation-api.herokuapp.com/api'
 };
