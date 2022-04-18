@@ -28,7 +28,7 @@ export class LoginService {
       headers: new HttpHeaders({})
     }
     return this.http
-      .post("http://localhost:8080/api/login", fd, httpOptions).subscribe(
+      .post("https://spring-webvacation-api.herokuapp.com/api/login", fd, httpOptions).subscribe(
         res => {
 
           this.router.navigate(['dashboard'])
@@ -63,7 +63,7 @@ export class LoginService {
       headers: new HttpHeaders({})
     }
     return this.http
-      .post("http://localhost:8080/api/login", fd, httpOptions).subscribe(
+      .post("https://spring-webvacation-api.herokuapp.com/api/login", fd, httpOptions).subscribe(
         res => {
           this._token = res['access_token']
           console.log(this._token)
