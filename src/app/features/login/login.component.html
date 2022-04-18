@@ -3,7 +3,7 @@
     <div class="col-sm-4 d-flex justify-content-center align-items-center">
       <form class="form-background">
         <div class="form-group">
-          <h2 *ngIf="loginService.userName != 'doe'" >You are logged in!</h2>
+          <h2 *ngIf="loginService.userId != 0" >You are logged in!</h2>
           <label class="label-text" for="exampleInputEmail1">Username</label>
           <input #userName  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
                  placeholder="Enter Username">
