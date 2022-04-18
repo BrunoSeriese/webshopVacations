@@ -13,7 +13,7 @@
           <input #userPassword required type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
         </div>
         <div class="button-group d-flex justify-content-between">
-          <input type="button" class="btn btn-primary" value="Log in"  (click)="loginService.login(userName.value, userPassword.value)">
+          <input type="button" class="btn btn-primary" value="Log in" *ngIf="loginService.userName =='adminAcc1'" (click)="loginService.login(userName.value, userPassword.value)">
 
           <button  class="btn btn-danger"
           (click)="loginService.logout()">Back</button>

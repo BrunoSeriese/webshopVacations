@@ -33,8 +33,7 @@ export class LoginService {
 
           this.router.navigate(['dashboard'])
           this._token = res['access_token']
-          console.log(this._token)
-          console.log(res)
+
         },
         error => {
           console.log(error)
@@ -66,8 +65,7 @@ export class LoginService {
       .post("https://spring-webvacation-api.herokuapp.com/api/login", fd, httpOptions).subscribe(
         res => {
           this._token = res['access_token']
-          console.log(this._token)
-          console.log(this.getUserId())
+
         },
         error => {
           console.log(error)
