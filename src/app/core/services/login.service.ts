@@ -86,7 +86,7 @@ export class LoginService {
       headers: new HttpHeaders({})
     }
     return this.http
-      .post("http://localhost:8080/api/signup",  body, httpOptions).subscribe()
+      .post("https://spring-webvacation-api.herokuapp.com/api/signup",  body, httpOptions).subscribe()
   }
 
   public logout(){
